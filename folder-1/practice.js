@@ -88,8 +88,17 @@ let kitten = {
   furColour: "brown",
 };
 // with dot notation
-console.log(kitten.ageMonths);
-console.log(kitten.isFemale);
-console.log(kitten.furColour);
+// console.log(kitten.ageMonths);
+// console.log(kitten.isFemale);
+// console.log(kitten.furColour);
 
 }
+
+
+function sum(num1 , num2){
+  const sumnum =num1 + num2
+  console.log(sumnum);
+
+
+}
+sum(10 , 20)
