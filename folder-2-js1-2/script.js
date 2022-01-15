@@ -25,6 +25,14 @@ alert (`your birthday is ${birthday}`)
 
 // console.log(birthday);
 
+let num = "10"
+// console.log(parseInt(num));
+// console.log(num + 10)
+
+
+
+
+
 
 
 
