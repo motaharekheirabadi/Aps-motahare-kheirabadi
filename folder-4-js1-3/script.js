@@ -370,7 +370,7 @@ const words = [
 
 const moreThanSix = words.filter((word) => word.length > 6);
 
-// console.log(moreThanSix);
+console.log(moreThanSix);
 
 const greet = (name) => console.log(` Hey ${name} `);
 
