@@ -31,3 +31,15 @@ function makeheart(){
     // console.log('<3');
 }
 makeheart();
+
+function greeting(firstName , lastName , age ,role , ideas){
+    // console.log(firstName , lastName , age ,role , ideas)
+}
+
+greeting('moti' , 'kheirabadi' , 21 , 'student' , 'love aps')
+
+
+function random(){
+    return Math.round(Math.random()*100)
+    
+}
