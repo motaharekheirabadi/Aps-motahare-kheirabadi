@@ -356,6 +356,22 @@ for(let i=0 ; i<animals.length ; i++){
 
 for(let i= animals.length - 1 ; i>=0 ; i--){
     // console.log(animals[i]);
-    
+
 }
 
+const words = [
+  "spray",
+  "limit",
+  "elite",
+  "exuberant",
+  "destruction",
+  "present",
+];
+
+const moreThanSix = words.filter((word) => word.length > 6);
+
+// console.log(moreThanSix);
+
+const greet = (name) => console.log(` Hey ${name} `);
+
+// greet("Harry");
