@@ -32,3 +32,13 @@ const h1 = document.querySelector("h1");
 input.addEventListener("input", (e) => {
   h1.innerText = input.value;
 });
+
+//////////////////////////////////////////////////////////////////
+    
+const h1 = document.querySelector("h1");
+const input = document.querySelector("#username");
+
+input.addEventListener("input", (e) => {
+  h1.textContent = `welcome: ${e.target.value}`;
+});
+
