@@ -94,6 +94,22 @@ console.log("before");
 console.log(isRightTriangle(3, 4, 5));
 
 //////////////////////////////////////////////////////////////////////
+//? callback
+
+ setTimeout(() => {
+  document.body.style.backgroundColor = "red";
+}, 1000);
+ 
+setTimeout(() => {
+  document.body.style.backgroundColor = "orange";
+}, 2000);
+ 
+setTimeout(() => {
+  document.body.style.backgroundColor = "yellow";
+}, 3000);
+
+
+
 
 
 
