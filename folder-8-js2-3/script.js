@@ -110,6 +110,32 @@ setTimeout(() => {
 
 
 
+setTimeout(() => {
+  document.body.style.backgroundColor = "red";
+  setTimeout(() => {
+    document.body.style.backgroundColor = "yellow";
+    setTimeout(() => {
+      document.body.style.backgroundColor = "green";
+      setTimeout(()=>{
+        document.body.style.backgroundColor = 'blue'
+      } , 1000)
+    }, 1000);
+  }, 1000);
+}, 1000);
+
+
+const delayedColorChange = (newColor, delay) => {
+  setTimeout(() => {
+    document.body.style.backgroundColor = newColor;
+  }, delay);
+};
+// 
+delayedColorChange("red", 2000);
+delayedColorChange("olive", 4000);
+delayedColorChange("khaki", 5000);
+
+
+
 
 
 
