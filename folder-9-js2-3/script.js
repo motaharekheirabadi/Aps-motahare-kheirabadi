@@ -15,3 +15,41 @@ const fakeRequestCallback = (url, success, failure) => {
     }
   }, delay);
 };
+
+
+
+fakeRequestCallback(
+  "jasem.com/page1",
+  function success(response) {
+    console.log("it worked page 1");
+    console.log(response);
+
+    fakeRequestCallback(
+      "jasem.com/page2",
+      function success(response) {
+        console.log("it worked page 2");
+        console.log(response);
+
+        fakeRequestCallback(
+          "jasem.com/page3",
+          function success(response) {
+            console.log("it worked page 3");
+            console.log(response);
+          },
+          function failure(error) {
+            console.log("error in page 3");
+            console.log(error);
+          }
+        );
+      },
+      function failure(error) {
+        console.log("error in page 2");
+        console.log(error);
+      }
+    );
+  },
+  function failure(error) {
+    console.log("error in page 1");
+    console.log(error);
+  }
+);
