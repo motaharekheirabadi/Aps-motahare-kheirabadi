@@ -53,3 +53,19 @@ fakeRequestCallback(
     console.log(error);
   }
 );
+
+
+const fakeRequestPromise = (url) => {
+  return new Promise((resolve, reject) => {
+    const delay = Math.floor(Math.random() * 4500) + 500;
+    console.log(delay);
+
+    setTimeout(() => {
+      if (delay < 3000) {
+        resolve(`here is your fake data from ${url}`);
+      } else {
+        reject("connection timeout :( ");
+      }
+    }, delay);
+  });
+};
