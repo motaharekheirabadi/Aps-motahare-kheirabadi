@@ -58,3 +58,28 @@ rainbow("red", 1000)
   .catch((err) => console.log(err));
 
   //////////////////////////////////////////////////////////////////////
+ const login = async (username, password) => {
+  if (!username || !password) {
+     throw "missing credential";
+   }
+
+   if (password === "jasem") {
+     return `welcome to www.jasemKala.com dear ${username}`;
+   }
+
+   throw "invalid password";
+
+ };
+
+
+  login("benyamin", "jasem")
+  .then((msg) => {
+    console.log("logged in!");
+    console.log(msg);
+  })
+  .catch((err) => {
+    console.log("Error!");
+    console.log(err);
+  });
+//////////////////////////////////////////////////////////
+
