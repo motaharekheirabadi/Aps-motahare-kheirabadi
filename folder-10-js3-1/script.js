@@ -1,4 +1,4 @@
-//! 5/12/1400
+//! 5/12/1400  && 6/12/1400
 
 fakeRequestPromise("yelp.com/api/coffee/page1")
   .then((data) => {
@@ -15,3 +15,31 @@ fakeRequestPromise("yelp.com/api/coffee/page1")
   .catch((err) => {
     console.log("OH NO, A REQUEST FAILED!!!", err);
   });
+
+  //////////////////////////////////////////////////////////
+// 
+  const fakeRequest = (url) => {
+  return new Promise((resolve, reject) => {
+    const rand = Math.random();
+    console.log("random number is : ", rand);
+    setTimeout(() => {
+      if (rand < 0.1) {
+        resolve(`your fake data here: ${url}`);
+      }
+
+      reject("request error");
+    }, 1000);
+  });
+};
+
+fakeRequest("/dogs/1")
+  .then((res) => {
+    console.log("done with request");
+    console.log("data is : ", res);
+  })
+  .catch((err) => {
+    console.log("OH , No!", err);
+  });
+
+  ///////////////////////////////////////////////////////////////
+ 
