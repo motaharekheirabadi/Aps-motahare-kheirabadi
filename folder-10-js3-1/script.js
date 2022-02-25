@@ -43,3 +43,18 @@ fakeRequest("/dogs/1")
 
   ///////////////////////////////////////////////////////////////
  
+const rainbow = (colour, delay) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      document.body.style.backgroundColor = colour;
+      resolve();
+    }, delay);
+  });
+};
+rainbow("red", 1000)
+  .then(() => rainbow("orange", 1000))
+  .then(() => rainbow("yellow", 1000))
+  .then(() => rainbow("green", 1000))
+  .catch((err) => console.log(err));
+
+  //////////////////////////////////////////////////////////////////////
