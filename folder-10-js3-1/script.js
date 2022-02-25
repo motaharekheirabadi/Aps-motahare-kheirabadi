@@ -83,3 +83,26 @@ rainbow("red", 1000)
   });
 //////////////////////////////////////////////////////////
 
+const delayedColorChange = (color, delay) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      document.body.style.backgroundColor = color;
+      resolve();
+    }, delay);
+  });
+};
+
+
+async function rainbow() {
+  delayedColorChange("red", 1000);
+  delayedColorChange("orange", 1000);
+}
+
+rainbow();
+
+
+async function rainbow2() {
+    await delayedColorChange("red", 1000);
+  delayedColorChange("orange", 1000);
+}
+rainbow2();
