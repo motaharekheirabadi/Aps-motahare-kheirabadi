@@ -20,3 +20,27 @@ const apiToPost = {
 
 const toApiFormat = JSON.stringify(apiToPost);
 console.log(toApiFormat);
+
+/////////////////////////////////////////////////////////////////////
+
+const req = new XMLHttpRequest();
+
+req.onload = function () {
+  console.log("ALL DONE WITH REQUEST!!!");
+  console.log(req);
+  const data = JSON.parse(req.responseText);
+  console.log(data);
+};
+
+req.onerror = function () {
+  console.log("ERROR!!!");
+  console.log(req);
+};
+
+req.open("GET", "https://jsonplaceholder.typicode.com/todos/");
+req.send();
+
+///////////////////////////////////////////////////////////////////////////
+
+
+
