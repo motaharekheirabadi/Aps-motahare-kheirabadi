@@ -59,3 +59,12 @@ const makeImages = (shows) => {
     }
   }
 };
+
+/////////////////////////////////////////////////////////////////
+
+// READ (GET)
+fetch("https://jsonplaceholder.typicode.com/posts")
+  .then((data) => data.json())
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err));
+
