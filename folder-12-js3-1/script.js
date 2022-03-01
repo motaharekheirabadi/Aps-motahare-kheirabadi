@@ -68,3 +68,23 @@ fetch("https://jsonplaceholder.typicode.com/posts")
   .then((res) => console.log(res))
   .catch((err) => console.log(err));
 
+  //////////////////////////////////////////////////////////////
+
+  // POST
+fetch("https://jsonplaceholder.typicode.com/posts", {
+  method: "POST",
+  headers: {
+    "Content-type": "application/json; charset=UTF-8",
+  },
+  body: JSON.stringify({
+    body: "some useless text",
+    title: "a big title",
+    userId: 1,
+  }),
+})
+  .then((res) => res.json())
+  .then((res) => console.log(res));
+
+  /////////////////////////////////////////////////////////////
+
+
